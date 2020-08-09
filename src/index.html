@@ -7,6 +7,8 @@
         <meta name="theme-color" content="#424242" />
         
         <link href="index.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Light"/>
         
         <script src="StrQualityUtils.js"></script>
         <script src="main.js"></script>
@@ -16,18 +18,23 @@
     
     <body onload="main()">
        
-        <!-- <div class="toolbar"></div> -->
+        <!--<div class="toolbar">
+            <span class="layout-hbox">Readability analyzer</span>
+        </div>-->
         
         <div class="layout-vbox main-content">
         
             <section>
 
-                <h1>Анализ удобочитаемости текста</h1> 
-
-                <form>
-                    <p><textarea id="text-area"></textarea></p>
-                    <p><input type="button" value="Рассчитать" id="button-calc" onclick="calcTextProperties()"></p>
-                </form>
+                <h1>Анализ удобочитаемости</h1>
+                <h2>Текст</h2>
+                
+                <div>
+                    <form>
+                        <p><textarea id="text-area"></textarea></p>
+                        <p><input type="button" value="Рассчитать" id="button-calc" onclick="calcTextProperties()"></p>
+                    </form>
+                </div>
 
                 <div>
                     <h2>Статистика (общие показатели)</h2>
@@ -49,6 +56,8 @@
                     <ul>
                         <li><span class="label" id="">Индекс туманности: </span>
                             <span id="fog-index">0</span></li>
+                        <li><span class="label" id="">Индекс Флеша: </span>
+                            <span id="fres-index">0</span></li>
                     </ul>
 
                 </div>
@@ -56,8 +65,8 @@
                 <div>
                     <h2>Справочная информация</h2>
 
-                    <p><span>Индекс туманности Ганнинга или Фог-индекс (Fog Index) показывает уровень удобочитаемости текста.</span></p>
-                    <p><span>Индекс Ганнинга для русскоязычного текста рассчитывается по формуле: 0.4 * (0.78 * Nsw + 100 * Nwt), где Nsw - количество слов в предложении, а Nwt - относительное количество сложных слов в тексте (слов с 3 и более слогами)</span></p>
+                    <p><span><strong>Индекс туманности Ганнинга</strong> или Фог-индекс (Fog Index) показывает уровень удобочитаемости текста. <strong>Меньше - лучше</strong></span></p>
+                    <p><span><strong>Индекс Флеша</strong> - характеризует легкость чтения и прогнозирует интерес к тексту. <strong>Больше - лучше</strong></span></p>
 
                 </div>
             

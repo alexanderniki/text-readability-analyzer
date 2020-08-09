@@ -8,6 +8,7 @@ function calcTextProperties() {
     let complexWordsCount = document.getElementById("complex-words");
     let sentencesCount = document.getElementById("sentences");
     let spanIndex = document.getElementById("fog-index");
+    let fresIndex = document.getElementById("fres-index");
     
     let textCalc = new StrQualityUtils();
     let text = textArea.value;
@@ -17,4 +18,5 @@ function calcTextProperties() {
     complexWordsCount.innerHTML = textCalc.calcComplexWords(text);
     sentencesCount.innerHTML = textCalc.calcSentences(text)
     spanIndex.innerHTML = textCalc.calcFogIndex(text);
+    fresIndex.innerHTML = textCalc.calcFRES(text);
 }

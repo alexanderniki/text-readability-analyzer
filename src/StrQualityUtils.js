@@ -81,10 +81,6 @@ class StrQualityUtils {
         return (fogIndex);
     }
 
-    calcFlashIndex(text) {
-        // Calculate flash-index of a string
-    }
-
     calcSyllables(text) {
         
         let word = text.toLowerCase();
@@ -98,6 +94,23 @@ class StrQualityUtils {
         
         //return word.match(/[aeiouy]{1,2}/g).length;
         return word.match(/[aeiouyаеиоуыяю]{1,2}/g).length;
+    }
+    
+    calcFRES(text) {
+        
+        let words = this.calcWords(text);
+        let syllables = this.calcSyllables(text);
+        let sentences = this.calcSentences(text);
+        
+        let ASL = words / sentences;
+        let ASW = syllables / words;
+        
+        console.log("ASL: " + ASL + " ASW: " + ASW);
+        
+        let fresIndex = 206.835 - (1.3 * ASL) - (60.1 * ASW);
+        fresIndex = Math.round(fresIndex);
+        
+        return(fresIndex);
     }
 
 }
