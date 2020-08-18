@@ -6,8 +6,9 @@
     
     --background-primary: #fafafa;
     --background-secondary: #424242;
-    --text-primary: #424242
+    --text-primary: #424242;
     --text-secondary: #424242;
+    --font-family: "Ubuntu", sans-serif;
 }
 
 body {
@@ -15,16 +16,22 @@ body {
     /*background-color: #fafafa;*/
     background-color: var(--background-primary);
     
-    font-family: "Roboto", sans-serif;
+    /*font-family: "Ubuntu", sans-serif;*/
+    font-family: var(--font-family);
     font-size: 1em;
     line-height: 1.5em;
     margin: 0;
 }
 
+a {
+    color: #0090ff;
+    text-decoration: none;
+}
+
 h1 {
     margin: 0px;
-    font-family: "Roboto Light", sans-serif;
-    font-weight: normal;
+    font-family: "Ubuntu Light", sans-serif;
+    font-weight: 300;
     font-size: 1.5em;
     color: #909090;
     line-height: 2em;
@@ -89,21 +96,48 @@ section {
  * Typography
  */
 
-.typography-h1 {}
+.typography-h1 {
+    font-size: 3.05em; /* 48px */
+    font-weight: 300;
+}
 
-.typography-h2 {}
+.typography-h2 {
+    font-size: 2.44em; /* 39px */
+}
 
-.typography-h3 {}
+.typography-h3 {
+    font-size: 1.95em; /* 31px */
+}
 
-.typography-h4 {}
+.typography-h4 {
+    font-size: 1.56em; /* 25px */
+}
 
-.typography-h5 {}
+.typography-h5 {
+    font-size: 1.25em; /* 20px */
+}
 
-.typography-body {}
+.typography-body {
+    font-size: 1em; /* 16px */
+}
 
-.typography-label{}
+.typography-primary-text{
+    font-size: 0.8em; /* 13px */
+}
 
-.typography-button {}
+.typography-secondary-text{
+    font-size: 0.64em; /* 10px */
+}
+
+.typography-overline{
+    font-size: 0.51em; /* 8px */
+    text-transform: uppercase;
+}
+
+.typography-button {
+    font-size: 0.8em; /* 13px */
+    text-transform: uppercase;
+}
 
 
 
